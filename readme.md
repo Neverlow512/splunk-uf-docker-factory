@@ -37,6 +37,7 @@ Before you begin, ensure you have the following setup:
 *   **Firewall Open:** The firewall on the machine running Splunk Enterprise **must allow inbound TCP connections** on the configured receiving port from your host machine.
 
 ## Core Concept / Workflow
+**My choice was VMWare but you can use whatever you want**
 
 1.  **Prepare Splunk VM:** Ensure Splunk Enterprise is installed, running, configured for receiving (e.g., on port 9997), and its firewall allows connections on that port. Identify its IP address.
 2.  **Prepare Host:** Clone this repository (`splunk-uf-docker-factory`), install Python requirements.
@@ -91,7 +92,11 @@ If you encounter issues after running `setup.py`:
 1.  Consult the `helpme.md` file inside the specific instance directory you are working with.
 2.  Use the provided diagnostic scripts located in the **root** of this repository (run as Administrator):
     *   `gather_host_info.ps1` (Run on the host machine).
+<<<<<<< HEAD
     *   `gather_vm_info.ps1` (Run on the Splunk Enterprise VM).
+=======
+    *   `gather_vm_info.ps1` (Run on the Splunk Enterprise VM). - My choice was VMWare but you can use whatever you want
+>>>>>>> develop
     *   Examine the generated `*.json` reports for details on connectivity, firewalls, Docker status, and Splunk listener status.
 
 ## Contributing
