@@ -1,0 +1,4 @@
+# requirements.txt
+# Required Python packages for setup.py
+
+python-dotenv>=1.0.0

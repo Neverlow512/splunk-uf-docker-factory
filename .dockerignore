@@ -1,0 +1,50 @@
+# Exclude Git repository files
+.git/
+.gitignore
+.gitattributes
+
+# Exclude Python environment and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+ENV/
+pip-log.txt
+requirements.txt
+
+# Exclude IDE and OS specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Exclude setup script and related config/diagnostics
+setup.py
+setup_config.json
+.env
+.env.example
+gather_host_info.ps1
+gather_vm_info.ps1
+*.json
+*.log
+
+# Exclude README and help files (not needed in image)
+README.md
+helpme.md
+
+# Don't include host logs in the build context (mounted at runtime)
+host_logs/
+
+# Don't include generated instance subdirectories if building from root
+# (setup.py builds from within the instance dir, so this acts as a safeguard)
+*/config/
+*/host_logs/
+*/Dockerfile
+*/docker-compose.yml
+*/generate_logs.py
+*/helpme.md
+*/.env
+*/.dockerignore
